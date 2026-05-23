@@ -1,7 +1,12 @@
 from fastapi import FastAPI, HTTPException
-from src.Book import Book
+from book import Book
+
+import models
+from database import engine
 
 app = FastAPI()
+
+models.Base.metadata.create_all(bind=engine)
 
 BOOKS = {
     1: Book(id=1, title="A", description="description", price=120),
