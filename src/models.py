@@ -2,6 +2,7 @@ from database import Base
 from sqlalchemy import Integer, Column, String, Float
 from pydantic import BaseModel, Field
 
+
 class Books(Base):
     __tablename__ = 'books'
 
