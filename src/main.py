@@ -3,7 +3,7 @@ from src.routers import books, auth
 
 app = FastAPI()
 
-@app.get
+@app.get("/")
 async def root():
     return {"message":"Welcome to the book store API"}
 
