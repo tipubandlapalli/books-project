@@ -3,6 +3,10 @@ from src.routers import books, auth
 
 app = FastAPI()
 
+@app.get("/")
+async def root():
+    return {"message":"Welcome to the book store API"}
+
 app.include_router(books.router)
 app.include_router(auth.router)
 
