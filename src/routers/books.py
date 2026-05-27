@@ -2,9 +2,9 @@ from fastapi import APIRouter, HTTPException, Depends, Path, status
 from typing import Annotated
 from sqlalchemy.orm import Session
 
-from models import Books, Base, BookRequest
-from database import engine, SessionLocal
-from routers.auth import get_current_user
+from src.models import Books, Base, BookRequest
+from src.database import engine, SessionLocal
+from src.routers.auth import get_current_user
 
 router = APIRouter(
     prefix='/v1/books',

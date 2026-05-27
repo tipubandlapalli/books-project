@@ -6,8 +6,8 @@ top_secret = {
 from fastapi import APIRouter, Depends, HTTPException, status
 from typing import Annotated
 from pydantic import BaseModel, BaseModel, BeforeValidator
-from models import Users
-from database import SessionLocal
+from src.models import Users
+from src.database import SessionLocal
 from sqlalchemy.orm import Session
 from passlib.context import CryptContext
 from fastapi.security import OAuth2PasswordRequestForm, OAuth2PasswordBearer

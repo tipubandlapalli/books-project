@@ -1,4 +1,4 @@
-from database import Base
+from src.database import Base
 from sqlalchemy import Integer, Column, String, Float, ForeignKey
 from pydantic import BaseModel, Field
 
